@@ -5,7 +5,7 @@ import tkinter as tk
 # In this module, all of the _todo_ items will be in one comment because you
 # will be modifying the same block of code as you go.
 #
-# TODO: 1. (1 pt)
+# Done: 1. (1 pt)
 #
 #   First, create a tkinter window called window.
 #
@@ -15,7 +15,7 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 #
-# TODO: 2. (4 pts)
+# Done: 2. (4 pts)
 #
 #   Now, create a frame called frm_a that has a width of 100 and height of 100.
 #
@@ -36,3 +36,19 @@ import tkinter as tk
 #   Once you have done this, then change the above _TODO_ to DONE.
 #
 ###############################################################################
+def left_click(event):
+    print("Left")
+
+def right_click(event):
+    print("Right")
+
+window = tk.Tk()
+window.title("Mouse Click Events")
+
+frm_a = tk.Frame(window, width=100, height=100)
+frm_a.pack()
+
+frm_a.bind("<Button-1>", left_click)
+frm_a.bind("<Button-3>", right_click)
+
+window.mainloop()
